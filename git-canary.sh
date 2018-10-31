@@ -76,10 +76,10 @@ if [[ ! -z ${HELP} ]]
 then
     printf "${SCRIPT}: See if there's any local modifications to a git checkout\n"
     printf "Usage: ${SCRIPT} [options]\n"
-    display_cmd_option "-g" "--git-dir"  "<dir>"    "The git repository directory (optional)"
+    display_cmd_option "-g" "--git-dir"  "<dir>"    "The git repository directory (optional).  Uses CANARY_GIT_DIR environment variable otherwise"
     display_cmd_option "-h" "--help"     "${BLANK}" "Display this help information"
     display_cmd_option "-v" "--verbose"  "${BLANK}" "Be verbose about what we're doing"
-    display_cmd_option "-w" "--work-dir" "<dir>"    "The git checkout directory"
+    display_cmd_option "-w" "--work-dir" "<dir>"    "The git checkout directory.  Uses CANARY_WORK_DIR environment variable otherwise"
 
     printf "\n"
     printf "If you want this to run automatically, add the following line to your crontab:\n"

@@ -154,6 +154,7 @@ fi
 if [[ ! -z ${OUTPUT} ]]
 then
     echo ${OUTPUT}
+    rm ${TMPFILE}
     exit 1
 else
     if [[ ${DISPLAY_OUTPUT} -eq 1 ]]
